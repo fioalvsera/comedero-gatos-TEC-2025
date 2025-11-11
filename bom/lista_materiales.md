@@ -1,4 +1,4 @@
-#Materiales Necesarios:
+# Materiales Necesarios:
 * ESP32
 * LED
 * PIR
