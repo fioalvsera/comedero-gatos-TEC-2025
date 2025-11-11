@@ -1,4 +1,4 @@
-# Comedero Automático para Gatos — Equipo <Fiorella Alvarado>
+# Comedero Automático para Gatos — Fiorella Alvarado
 ## Descripción
 Pequeño sistema que dispensa alimento automáticamente usando
 <Arduino/ESP32> y un motor.
@@ -7,8 +7,6 @@ Pequeño sistema que dispensa alimento automáticamente usando
 - Se puede activar con botón o temporizador.
 ## Lista de Materiales
 Ver archivo en `bom/`.
-## Diagrama y conexiones
-Imagen en `docs/esquema.png`.
 ## Código
 Código fuente en `firmware/`.
 ## Evidencia
