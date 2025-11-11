@@ -3,5 +3,6 @@
 * LED
 * Sensor PIR
 * Micro Servo Motor
-* Resistor de 220 Ω
+* Resistencia de 220 Ω
 * Protoboard pequeña
+* Cables (para realizar las conexiones)
