@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 75.4, "left": 141.6, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 28.8, "left": -4.76, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -5.6, "left": 251.82, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 238, "left": 192, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 167.15,
+      "left": 163.2,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 121.2,
+      "left": 205.4,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.3", "bb1:1b.h", "black", [ "h28.8", "v67.2" ] ],
+    [ "esp:5", "bb1:8b.j", "green", [ "h19.2", "v76.8", "h86.4", "v-19.2" ] ],
+    [ "servo1:PWM", "esp:13", "green", [ "h-144", "v-105.4" ] ],
+    [
+      "esp:2",
+      "bb1:16t.b",
+      "green",
+      [ "h9.6", "v38.4", "h105.6", "v-19.2", "h105.6", "v-105.6" ]
+    ],
+    [ "esp:3V3", "bb1:15t.b", "green", [ "h-19.05", "v-38.4", "h249.6", "v19.2" ] ],
+    [ "bb1:15t.b", "bb1:9b.h", "green", [ "v0" ] ],
+    [ "servo1:V+", "bb1:9b.i", "green", [ "h-28.8", "v-47.9", "h115.2" ] ],
+    [ "servo1:GND", "bb1:17t.e", "black", [ "h-19.2", "v-28.8", "h86.4", "v-38.4", "h38.4" ] ],
+    [ "r1:1", "bb1:2b.h", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:8b.h", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:9b.g", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:8b.g", "", [ "$bb" ] ],
+    [ "pir1:VCC", "bb1:15t.a", "", [ "$bb" ] ],
+    [ "pir1:OUT", "bb1:16t.a", "", [ "$bb" ] ],
+    [ "pir1:GND", "bb1:17t.a", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
